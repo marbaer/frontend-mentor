@@ -51,6 +51,7 @@ button.main-cta {
     font-family: inherit;
     font-size: inherit;
     color: hsl(257, 40%, 49%);
+    background-color: #ffffff;
     width: 170px;
     height: 50px;
     border-radius: 25px;
