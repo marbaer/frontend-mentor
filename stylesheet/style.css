@@ -1,7 +1,7 @@
 body {
     background: url(../images/bg-desktop.svg) hsl(257, 40%, 49%) no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    background-size: auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #ffffff;
@@ -13,7 +13,7 @@ a {
 
 .container {
     display: grid;
-    grid-template-columns: auto 53% 37% auto;
+    grid-template-columns: 5% 1.5fr 1fr 5%;
     grid-template-rows: 110px 1fr 80px;
     max-width: 1440px;
     margin: 0 auto;
@@ -24,12 +24,13 @@ a {
     grid-row: 1;
     width: 190px;
     margin: auto 0;
+    max-width: 42%;
 }
 
 .mockups {
     grid-column: 2;
     grid-row: 2;
-    width: 93%;
+    width: 92%;
     margin-top: 50px;
 }
 
@@ -60,6 +61,7 @@ button.main-cta {
 .social-buttons {
     grid-column: 3;
     grid-row: 3;
+    width: 97%;
     margin: auto 0;
     text-align: right;
 }
@@ -76,5 +78,50 @@ button.main-cta {
 
 .attribution { 
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+    .container {
+        grid-template-columns: 5% 1fr 1fr 5%;
+    }
+}
+ 
+@media all and (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .container {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 110px auto auto auto;
+    }
+    .mockups {
+        margin: 20px auto 0 auto;
+    }
+    .main-text {
+        grid-column: 2;
+        grid-row: 3;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .social-buttons {
+        grid-column: 2;
+        grid-row: 4;
+        width: 100%;
+        text-align: center;
+        margin: 50px 0;
+    }
+}
+
+@media all and (max-width: 375px) {
+    body {
+        background: url(../images/bg-mobile.svg) hsl(257, 40%, 49%) no-repeat;
+        background-position: top;
+        background-size: auto;
+         }
 }
